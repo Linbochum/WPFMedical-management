@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Maintenance" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Maintenance.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Maintenance.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Maintenance.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Maintenance_btnLoginrecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnLoginrecord" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btnLoginrecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnLoginrecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btnDeletingLoginRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeletingLoginRecords" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btnDeletingLoginRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeletingLoginRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btnQueryaccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnQueryaccount" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btnQueryaccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnQueryaccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btnlevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnlevel" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btnlevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnlevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btngender_InputMessage">
+    <wsdl:part name="parameters" element="tns:btngender" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btngender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btngenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btnstate_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnstate" />
+  </wsdl:message>
+  <wsdl:message name="Maintenance_btnstate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnstateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Maintenance">
+    <wsdl:operation name="btnLoginrecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/Maintenance/btnLoginrecord" message="tns:Maintenance_btnLoginrecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Maintenance/btnLoginrecordResponse" message="tns:Maintenance_btnLoginrecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnDeletingLoginRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/Maintenance/btnDeletingLoginRecords" message="tns:Maintenance_btnDeletingLoginRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Maintenance/btnDeletingLoginRecordsResponse" message="tns:Maintenance_btnDeletingLoginRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnQueryaccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/Maintenance/btnQueryaccount" message="tns:Maintenance_btnQueryaccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Maintenance/btnQueryaccountResponse" message="tns:Maintenance_btnQueryaccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnlevel">
+      <wsdl:input wsaw:Action="http://tempuri.org/Maintenance/btnlevel" message="tns:Maintenance_btnlevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Maintenance/btnlevelResponse" message="tns:Maintenance_btnlevel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btngender">
+      <wsdl:input wsaw:Action="http://tempuri.org/Maintenance/btngender" message="tns:Maintenance_btngender_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Maintenance/btngenderResponse" message="tns:Maintenance_btngender_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnstate">
+      <wsdl:input wsaw:Action="http://tempuri.org/Maintenance/btnstate" message="tns:Maintenance_btnstate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Maintenance/btnstateResponse" message="tns:Maintenance_btnstate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BLL.Tools.Maintenance" type="tns:Maintenance">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="btnLoginrecord">
+      <soap:operation soapAction="http://tempuri.org/Maintenance/btnLoginrecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnDeletingLoginRecords">
+      <soap:operation soapAction="http://tempuri.org/Maintenance/btnDeletingLoginRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnQueryaccount">
+      <soap:operation soapAction="http://tempuri.org/Maintenance/btnQueryaccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnlevel">
+      <soap:operation soapAction="http://tempuri.org/Maintenance/btnlevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btngender">
+      <soap:operation soapAction="http://tempuri.org/Maintenance/btngender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnstate">
+      <soap:operation soapAction="http://tempuri.org/Maintenance/btnstate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Maintenance">
+    <wsdl:port name="BLL.Tools.Maintenance" binding="tns:BLL.Tools.Maintenance">
+      <soap:address location="http://localhost:15008/BLL.Tools.Maintenance.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Management" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Management.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Management.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Management.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Management_bynQuerydrugs_InputMessage">
+    <wsdl:part name="parameters" element="tns:bynQuerydrugs" />
+  </wsdl:message>
+  <wsdl:message name="Management_bynQuerydrugs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bynQuerydrugsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnCTraditional_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnCTraditional" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnCTraditional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnCTraditionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnDrugtype_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnDrugtype" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnDrugtype_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnDrugtypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btn_Cedicine_InputMessage">
+    <wsdl:part name="parameters" element="tns:btn_Cedicine" />
+  </wsdl:message>
+  <wsdl:message name="Management_btn_Cedicine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btn_CedicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btn_western_InputMessage">
+    <wsdl:part name="parameters" element="tns:btn_western" />
+  </wsdl:message>
+  <wsdl:message name="Management_btn_western_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btn_westernResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnDeleteComd_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeleteComd" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnDeleteComd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeleteComdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnDeletCedcine_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeletCedcine" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnDeletCedcine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeletCedcineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btntraditionalChid_InputMessage">
+    <wsdl:part name="parameters" element="tns:btntraditionalChid" />
+  </wsdl:message>
+  <wsdl:message name="Management_btntraditionalChid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btntraditionalChidResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnWestern_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnWestern" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnWestern_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnWesternResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnSinglereceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnSinglereceive" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnSinglereceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnSinglereceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnAllreceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnAllreceive" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnAllreceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnAllreceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnnumberof_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnnumberof" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnnumberof_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnnumberofResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btncalculation_InputMessage">
+    <wsdl:part name="parameters" element="tns:btncalculation" />
+  </wsdl:message>
+  <wsdl:message name="Management_btncalculation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btncalculationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnprocessing_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnprocessing" />
+  </wsdl:message>
+  <wsdl:message name="Management_btnprocessing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnprocessingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Management">
+    <wsdl:operation name="bynQuerydrugs">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/bynQuerydrugs" message="tns:Management_bynQuerydrugs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/bynQuerydrugsResponse" message="tns:Management_bynQuerydrugs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnCTraditional">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btnCTraditional" message="tns:Management_btnCTraditional_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btnCTraditionalResponse" message="tns:Management_btnCTraditional_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnDrugtype">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btnDrugtype" message="tns:Management_btnDrugtype_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btnDrugtypeResponse" message="tns:Management_btnDrugtype_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btn_Cedicine">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btn_Cedicine" message="tns:Management_btn_Cedicine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btn_CedicineResponse" message="tns:Management_btn_Cedicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btn_western">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btn_western" message="tns:Management_btn_western_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btn_westernResponse" message="tns:Management_btn_western_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnDeleteComd">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btnDeleteComd" message="tns:Management_btnDeleteComd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btnDeleteComdResponse" message="tns:Management_btnDeleteComd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnDeletCedcine">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btnDeletCedcine" message="tns:Management_btnDeletCedcine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btnDeletCedcineResponse" message="tns:Management_btnDeletCedcine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btntraditionalChid">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btntraditionalChid" message="tns:Management_btntraditionalChid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btntraditionalChidResponse" message="tns:Management_btntraditionalChid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnWestern">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btnWestern" message="tns:Management_btnWestern_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btnWesternResponse" message="tns:Management_btnWestern_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnSinglereceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btnSinglereceive" message="tns:Management_btnSinglereceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btnSinglereceiveResponse" message="tns:Management_btnSinglereceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnAllreceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btnAllreceive" message="tns:Management_btnAllreceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btnAllreceiveResponse" message="tns:Management_btnAllreceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnnumberof">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btnnumberof" message="tns:Management_btnnumberof_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btnnumberofResponse" message="tns:Management_btnnumberof_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btncalculation">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btncalculation" message="tns:Management_btncalculation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btncalculationResponse" message="tns:Management_btncalculation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnprocessing">
+      <wsdl:input wsaw:Action="http://tempuri.org/Management/btnprocessing" message="tns:Management_btnprocessing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Management/btnprocessingResponse" message="tns:Management_btnprocessing_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BLL.Tools.Management" type="tns:Management">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="bynQuerydrugs">
+      <soap:operation soapAction="http://tempuri.org/Management/bynQuerydrugs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnCTraditional">
+      <soap:operation soapAction="http://tempuri.org/Management/btnCTraditional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnDrugtype">
+      <soap:operation soapAction="http://tempuri.org/Management/btnDrugtype" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btn_Cedicine">
+      <soap:operation soapAction="http://tempuri.org/Management/btn_Cedicine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btn_western">
+      <soap:operation soapAction="http://tempuri.org/Management/btn_western" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnDeleteComd">
+      <soap:operation soapAction="http://tempuri.org/Management/btnDeleteComd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnDeletCedcine">
+      <soap:operation soapAction="http://tempuri.org/Management/btnDeletCedcine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btntraditionalChid">
+      <soap:operation soapAction="http://tempuri.org/Management/btntraditionalChid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnWestern">
+      <soap:operation soapAction="http://tempuri.org/Management/btnWestern" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnSinglereceive">
+      <soap:operation soapAction="http://tempuri.org/Management/btnSinglereceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnAllreceive">
+      <soap:operation soapAction="http://tempuri.org/Management/btnAllreceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnnumberof">
+      <soap:operation soapAction="http://tempuri.org/Management/btnnumberof" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btncalculation">
+      <soap:operation soapAction="http://tempuri.org/Management/btncalculation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnprocessing">
+      <soap:operation soapAction="http://tempuri.org/Management/btnprocessing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Management">
+    <wsdl:port name="BLL.Tools.Management" binding="tns:BLL.Tools.Management">
+      <soap:address location="http://localhost:15008/BLL.Tools.Management.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3f73e90e-1a88-4d89-b983-c55f5695d6ed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:15008/BLL.Tools.Assist.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BLL3.xsd" MetadataType="Schema" ID="d5b7e0e7-7ab2-48f4-afe1-77fc3b11a294" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Assist.svc?xsd=xsd0" />
+    <MetadataFile FileName="BLL31.xsd" MetadataType="Schema" ID="c5c86a64-0b4e-491d-9d84-ae45f4c404c3" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Assist.svc?xsd=xsd2" />
+    <MetadataFile FileName="BLL1.disco" MetadataType="Disco" ID="4e36b1e6-7f0f-4f74-8bcf-518e7b710d25" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Assist.svc?disco" />
+    <MetadataFile FileName="BLL32.xsd" MetadataType="Schema" ID="d71f996c-c7ae-4f3a-aacb-5a6e07fdb2db" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Assist.svc?xsd=xsd1" />
+    <MetadataFile FileName="Assist1.wsdl" MetadataType="Wsdl" ID="d5dce6ea-b110-4f97-9f2d-3b0b000fd07d" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Assist.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

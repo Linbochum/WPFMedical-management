@@ -1,0 +1,157 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width=" 1366" Height="768"     
+        MinWidth="480" MinHeight="280"
+        WindowStartupLocation="CenterScreen" 
+        Icon="/images/Login/2.png"
+        Title="医院后台管理系统" Loaded="Window_Loaded">
+    <DockPanel>
+        <StackPanel Background="#FF1F83C9" DockPanel.Dock="Left" Width="200">
+            <UniformGrid Height="60" Margin="0,0,0,30">
+                <Image Source="/images/Login/logo-light.png" Height="15" Margin="0,0,7,0"/>
+            </UniformGrid>
+            <DataGrid BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}" Margin="-3,0,7,0" RenderTransformOrigin="0.5,0.5" Height="0">
+                <DataGrid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </DataGrid.RenderTransform>
+                <DataGridTextColumn Header="登录类型" x:Name="type" Visibility="Collapsed" Binding="{Binding Account_type}" Width="80"/>
+                <DataGridTextColumn Header="ID" x:Name="ID" Visibility="Collapsed" Binding="{Binding ID}" Width="80"/>
+                <DataGridTextColumn Header="登录时间" x:Name="Time" Visibility="Collapsed" Binding="{Binding Login_time}" Width="80"/>
+            </DataGrid>
+
+
+            <!--组件-->
+            <Label Foreground="White" FontSize="10">内容</Label>
+            <StackPanel Background="#FF168DD1">
+                <Expander Background="#FF168DD1" Style="{StaticResource ExpanderStyle1}" Foreground="White" Margin="0,0,10,0">
+                    <Expander.Header>
+                        <StackPanel Width="130" VerticalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock Width="182" Foreground="White" FontSize="16" FontFamily="Bauhaus 93"><Run Text="出入院管理"/></TextBlock>
+                        </StackPanel>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel >
+
+                            <TextBlock Text="新增入院病人" Style="{StaticResource TextBlock}" MouseDown="The_new" x:Name="ls" />
+                            <TextBlock Text="出院管理" Style="{StaticResource TextBlock}" MouseDown="The_hospital" x:Name="hospital"/>
+                            <TextBlock Text="召回病人" Style="{StaticResource TextBlock}" MouseDown="Recall_the" x:Name="the"/>
+                            <TextBlock Text="费用结算" Style="{StaticResource TextBlock}" MouseDown="Cost_settlement" x:Name="settlement"/>
+                            <TextBlock Text="出院病人查询" Style="{StaticResource TextBlock}" MouseDown="Discharge_Enquiries" x:Name="Enquiries"/>
+                            <TextBlock Text="转科病人查询" Style="{StaticResource TextBlock}" MouseDown="Referral_enquiries" x:Name="Eies"/>
+                            <TextBlock Text="住院明细查询" Style="{StaticResource TextBlock}" MouseDown="Hospital_subsidiary" x:Name="subs"/>
+
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+                <TextBlock Height="2" Background="#FF0480AE"></TextBlock>
+                <!--组件第二下拉框-->
+                <Expander Background="#FF168DD1" Style="{StaticResource ExpanderStyle1}" Foreground="White" Margin="0,2,10,0">
+                    <Expander.Header>
+                        <StackPanel Width="130" VerticalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock FontSize="16" Width="182" Foreground="White" FontFamily="Bauhaus 93"><Run Text="护士工作站"/><Run Text="  "/><Run Text="              "/><Run Text="                       "/></TextBlock>
+                        </StackPanel>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel>
+                            <TextBlock Text="床位分配" Style="{StaticResource TextBlock}" MouseDown="Distribution_bed" x:Name="bed"/>
+                            <TextBlock Text="办理出院" Style="{StaticResource TextBlock}" MouseDown="Go_through" x:Name="through"/>
+                            <TextBlock Text="查对医嘱" Style="{StaticResource TextBlock}" MouseDown="Check_the" x:Name="thec"/>
+                            <TextBlock Text="领药查询" Style="{StaticResource TextBlock}" MouseDown="Recipients_query" x:Name="query"/>
+                            <TextBlock Text="查对中药方" Style="{StaticResource TextBlock}" MouseDown="Check_prescription" x:Name="prsecr"/>
+                            <TextBlock Text="记账管理" Style="{StaticResource TextBlock}" MouseDown="charge_account" x:Name="account"/>
+                            <TextBlock Text="器械申请" Style="{StaticResource TextBlock}" MouseDown="charge_Equipment" x:Name="Equipment"/>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+                <TextBlock Height="2" Background="#FF0480AE"></TextBlock>
+                <!--组件第三下拉框-->
+                <Expander Background="#FF168DD1" Style="{StaticResource ExpanderStyle1}" Foreground="White" Margin="0,2,10,0">
+                    <Expander.Header>
+                        <StackPanel Width="175" VerticalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock FontSize="16" Width="182" Foreground="White" FontFamily="Bauhaus 93"><Run Text="住院医生工作站"/></TextBlock>
+                        </StackPanel>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel>
+                            <TextBlock Text="医嘱管理" Style="{StaticResource TextBlock}" MouseDown="The_management" x:Name="manag"/>
+                            <TextBlock Text="住院中药处方" Style="{StaticResource TextBlock}" MouseDown="Chinese_hospital" x:Name="hosp"/>
+                            <TextBlock Text="病历浏览" Style="{StaticResource TextBlock}" MouseDown="Medical_browse" x:Name="BOR"/>
+                            <TextBlock Text="住院医嘱查询" Style="{StaticResource TextBlock}" MouseDown="Hospital_advice" x:Name="advise"/>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+                <TextBlock Height="2" Background="#FF0480AE"></TextBlock>
+                <!--组件第四下拉框-->
+                <Expander Background="#FF168DD1" Style="{StaticResource ExpanderStyle1}" Foreground="White" Margin="0,2,10,0">
+                    <Expander.Header>
+                        <StackPanel Width="130" VerticalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock FontSize="16" Width="182" Foreground="White" FontFamily="Bauhaus 93"><Run Text="辅助科管理系统"/></TextBlock>
+                        </StackPanel>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel>
+                            <TextBlock Text="功能科室病人查询" Style="{StaticResource TextBlock}" MouseDown="Functional_inquiry" x:Name="inquiry"/>
+                            <TextBlock Text="手术申请与报告" Style="{StaticResource TextBlock}" MouseDown="Surgical_report" x:Name="report"/>
+                            <TextBlock Text="手术启动与检查" Style="{StaticResource TextBlock}" MouseDown="Surgical_start" x:Name="start"/>
+                            <TextBlock Text="检查申请与报告" Style="{StaticResource TextBlock}" MouseDown="Review_reports" x:Name="reports"/>
+                            <TextBlock Text="辅助科室记账" Style="{StaticResource TextBlock}" MouseDown="Assisted_bookkeeping" x:Name="book"/>
+                            <TextBlock Text="住院费用明细查询" Style="{StaticResource TextBlock}" MouseDown="hospital_expenses" x:Name="expen"/>
+                            <TextBlock Text="物资库领用申请" Style="{StaticResource TextBlock}" MouseDown="Warehouse_application" x:Name="appli"/>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+                <TextBlock Height="2" Background="#FF0480AE"></TextBlock>
+                <!--组件第五下拉框-->
+                <Expander Background="#FF168DD1" Style="{StaticResource ExpanderStyle1}" Foreground="White" Margin="0,2,10,0">
+                    <Expander.Header>
+                        <StackPanel Width="130" VerticalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock FontSize="16" Width="182" Foreground="White" FontFamily="Bauhaus 93"><Run Text="药方管理系统"/></TextBlock>
+                        </StackPanel>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel>
+                            <TextBlock Text="住院发药" Style="{StaticResource TextBlock}" MouseDown="The_pills" x:Name="pilis"/>
+                            <!--<TextBlock Text="退药" Style="{StaticResource TextBlock }" MouseDown="Return_medicine" x:Name="meduc"/>-->
+                            <TextBlock Text="住院中药发放" Style="{StaticResource TextBlock}" MouseDown="Distribution_hospital" x:Name="hoesp"/>
+                            <TextBlock Text="药房药品设置" Style="{StaticResource TextBlock}" MouseDown="Drug_set" x:Name="sete"/>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+                <TextBlock Height="2" Background="#FF0480AE"></TextBlock>
+                <!--组件第六下拉框-->
+                <Expander Background="#FF168DD1" Style="{StaticResource ExpanderStyle1}" Foreground="White" Margin="0,2,10,0">
+                    <Expander.Header>
+                        <StackPanel Width="130" VerticalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock FontSize="16" Width="182" Foreground="White" Text="系统维护" FontFamily="Bauhaus 93"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel>
+                            <TextBlock Text="科室修改" Style="{StaticResource TextBlock}" MouseDown="Modify_the" x:Name="thex"/>
+                            <TextBlock Text="查询登录信息" Style="{StaticResource TextBlock}" MouseDown="Log_query" x:Name="lOG"/>
+                            <TextBlock Text="账号管理" Style="{StaticResource TextBlock}" MouseDown="Account_management" x:Name="manage"/>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+            </StackPanel>
+            <TextBlock Height="2" Background="#FF0480AE"></TextBlock>
+
+        </StackPanel>
+
+
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="145*"/>
+                <RowDefinition Height="592*"/>
+            </Grid.RowDefinitions>
+            <TabControl  Name="taowa" Tag="100" Background="#FFF0EEEE" SelectionChanged="taowa_SelectionChanged" Grid.RowSpan="2"/>
+        </Grid>
+
+    </DockPanel>
+</Window>

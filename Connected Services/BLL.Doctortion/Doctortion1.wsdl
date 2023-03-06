@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Doctortion" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Doctortion.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Doctortion.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Doctortion.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Doctortion_btndoctor_InputMessage">
+    <wsdl:part name="parameters" element="tns:btndoctor" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndoctor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btndoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnprescribing_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnprescribing" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnprescribing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnprescribingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btncycle_InputMessage">
+    <wsdl:part name="parameters" element="tns:btncycle" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btncycle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btncycleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndrug_InputMessage">
+    <wsdl:part name="parameters" element="tns:btndrug" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndrug_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btndrugResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnAnformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnAnformation" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnAnformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnAnformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnStoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnStoc" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnStoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnStocResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndruggo_InputMessage">
+    <wsdl:part name="parameters" element="tns:btndruggo" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndruggo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btndruggoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnmedicine_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnmedicine" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnmedicine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnmedicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnChine_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnChine" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnChine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnChineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnCtheprice_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnCtheprice" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnCtheprice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnCthepriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnWmedicine_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnWmedicine" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnWmedicine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnWmedicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnXdicine_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnXdicine" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnXdicine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnXdicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnStatebing_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnStatebing" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnStatebing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnStatebingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnakeway_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnakeway" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnakeway_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnakewayResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btninformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:btninformation" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btninformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btninformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:btndelete" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btndeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnadvice_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnadvice" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnadvice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnadviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndeleteadvice_InputMessage">
+    <wsdl:part name="parameters" element="tns:btndeleteadvice" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndeleteadvice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btndeleteadviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnorders_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnorders" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnorders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnordersResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnperfrom_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnperfrom" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnperfrom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnperfromResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnoperationtype_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnoperationtype" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnoperationtype_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnoperationtypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnDeterminetype_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeterminetype" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnDeterminetype_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeterminetypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnPatientstype_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnPatientstype" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnPatientstype_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnPatientstypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnoperating_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnoperating" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnoperating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnoperatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:btndepartment" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btndepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btndepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnurgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnurgent" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnurgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnurgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnapplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnapplication" />
+  </wsdl:message>
+  <wsdl:message name="Doctortion_btnapplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnapplicationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Doctortion">
+    <wsdl:operation name="btndoctor">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btndoctor" message="tns:Doctortion_btndoctor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btndoctorResponse" message="tns:Doctortion_btndoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnprescribing">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnprescribing" message="tns:Doctortion_btnprescribing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnprescribingResponse" message="tns:Doctortion_btnprescribing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btncycle">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btncycle" message="tns:Doctortion_btncycle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btncycleResponse" message="tns:Doctortion_btncycle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btndrug">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btndrug" message="tns:Doctortion_btndrug_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btndrugResponse" message="tns:Doctortion_btndrug_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnAnformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnAnformation" message="tns:Doctortion_btnAnformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnAnformationResponse" message="tns:Doctortion_btnAnformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnStoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnStoc" message="tns:Doctortion_btnStoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnStocResponse" message="tns:Doctortion_btnStoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btndruggo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btndruggo" message="tns:Doctortion_btndruggo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btndruggoResponse" message="tns:Doctortion_btndruggo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnmedicine">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnmedicine" message="tns:Doctortion_btnmedicine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnmedicineResponse" message="tns:Doctortion_btnmedicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnChine">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnChine" message="tns:Doctortion_btnChine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnChineResponse" message="tns:Doctortion_btnChine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnCtheprice">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnCtheprice" message="tns:Doctortion_btnCtheprice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnCthepriceResponse" message="tns:Doctortion_btnCtheprice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnWmedicine">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnWmedicine" message="tns:Doctortion_btnWmedicine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnWmedicineResponse" message="tns:Doctortion_btnWmedicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnXdicine">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnXdicine" message="tns:Doctortion_btnXdicine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnXdicineResponse" message="tns:Doctortion_btnXdicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnStatebing">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnStatebing" message="tns:Doctortion_btnStatebing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnStatebingResponse" message="tns:Doctortion_btnStatebing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnakeway">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnakeway" message="tns:Doctortion_btnakeway_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnakewayResponse" message="tns:Doctortion_btnakeway_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btninformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btninformation" message="tns:Doctortion_btninformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btninformationResponse" message="tns:Doctortion_btninformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btndelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btndelete" message="tns:Doctortion_btndelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btndeleteResponse" message="tns:Doctortion_btndelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnadvice">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnadvice" message="tns:Doctortion_btnadvice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnadviceResponse" message="tns:Doctortion_btnadvice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btndeleteadvice">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btndeleteadvice" message="tns:Doctortion_btndeleteadvice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btndeleteadviceResponse" message="tns:Doctortion_btndeleteadvice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnorders">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnorders" message="tns:Doctortion_btnorders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnordersResponse" message="tns:Doctortion_btnorders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnperfrom">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnperfrom" message="tns:Doctortion_btnperfrom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnperfromResponse" message="tns:Doctortion_btnperfrom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnoperationtype">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnoperationtype" message="tns:Doctortion_btnoperationtype_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnoperationtypeResponse" message="tns:Doctortion_btnoperationtype_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnDeterminetype">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnDeterminetype" message="tns:Doctortion_btnDeterminetype_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnDeterminetypeResponse" message="tns:Doctortion_btnDeterminetype_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnPatientstype">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnPatientstype" message="tns:Doctortion_btnPatientstype_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnPatientstypeResponse" message="tns:Doctortion_btnPatientstype_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnoperating">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnoperating" message="tns:Doctortion_btnoperating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnoperatingResponse" message="tns:Doctortion_btnoperating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btndepartment">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btndepartment" message="tns:Doctortion_btndepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btndepartmentResponse" message="tns:Doctortion_btndepartment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnurgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnurgent" message="tns:Doctortion_btnurgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnurgentResponse" message="tns:Doctortion_btnurgent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnapplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/Doctortion/btnapplication" message="tns:Doctortion_btnapplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Doctortion/btnapplicationResponse" message="tns:Doctortion_btnapplication_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BLL.Tools.Doctortion" type="tns:Doctortion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="btndoctor">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btndoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnprescribing">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnprescribing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btncycle">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btncycle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btndrug">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btndrug" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnAnformation">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnAnformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnStoc">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnStoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btndruggo">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btndruggo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnmedicine">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnmedicine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnChine">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnChine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnCtheprice">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnCtheprice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnWmedicine">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnWmedicine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnXdicine">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnXdicine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnStatebing">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnStatebing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnakeway">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnakeway" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btninformation">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btninformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btndelete">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btndelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnadvice">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnadvice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btndeleteadvice">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btndeleteadvice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnorders">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnorders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnperfrom">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnperfrom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnoperationtype">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnoperationtype" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnDeterminetype">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnDeterminetype" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnPatientstype">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnPatientstype" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnoperating">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnoperating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btndepartment">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btndepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnurgent">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnurgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnapplication">
+      <soap:operation soapAction="http://tempuri.org/Doctortion/btnapplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Doctortion">
+    <wsdl:port name="BLL.Tools.Doctortion" binding="tns:BLL.Tools.Doctortion">
+      <soap:address location="http://localhost:15008/BLL.Tools.Doctortion.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

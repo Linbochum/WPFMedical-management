@@ -1,0 +1,115 @@
+﻿<Window x:Class="WpfApp.View.Print.WD_Thednformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp.View.Print"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        Title="打印清单" Height="380" Width="700">
+    <!--公共样式-->
+    <Window.Resources>
+        <!---（1）蓝色-->
+        <!--单色黑色-->
+        <LinearGradientBrush x:Key="LGB_BlueT" 
+                             StartPoint="0,0">
+            <LinearGradientBrush.GradientStops>
+                <GradientStop Color="#FFB0B0B0" Offset="0"/>
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+
+        <Style x:Key="txtContent" TargetType="TextBox">
+            <!--边框颜色：黑色-->
+            <Setter Property="BorderBrush" Value="{StaticResource  LGB_BlueT}"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <!--边框粗度：左0，上0，右0，下1-->
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="FontSize" Value=" 15"/>
+            <Setter Property="FontFamily" Value=" 15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Gray"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="printArea">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock FontSize="18" Foreground="#FF1F83C9">医嘱清单</TextBlock>
+            </DockPanel>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <DockPanel VerticalAlignment="Center" Margin="5,0">
+                    <TextBlock FontSize="14" VerticalAlignment="Center">开嘱时间：</TextBlock>
+                    <TextBox Height="30" Width="140" Style="{StaticResource txtContent}" x:Name="txt_Opentoldtime"></TextBox>
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" Margin="5,0" Grid.Column="1">
+                    <TextBlock FontSize="14" VerticalAlignment="Center">住院编号：</TextBlock>
+                    <TextBox Height="30" Width="140" Style="{StaticResource txtContent}" x:Name="txt_Thenumber"></TextBox>
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" Margin="5,0" Grid.Column="2">
+                    <TextBlock FontSize="14" VerticalAlignment="Center">住院科室：</TextBlock>
+                    <TextBox Height="30" Width="140" Style="{StaticResource txtContent}" x:Name="txt_Thedepartments"></TextBox>
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" Margin="5,0" Grid.Row="1">
+                    <TextBlock FontSize="14" VerticalAlignment="Center">医嘱名称：</TextBlock>
+                    <TextBox Height="30" Width="140" Style="{StaticResource txtContent}" x:Name="txt_Nameadvice"></TextBox>
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" Margin="5,0" Grid.Row="1" Grid.Column="1">
+                    <TextBlock FontSize="14" VerticalAlignment="Center">病人姓名：</TextBlock>
+                    <TextBox Height="30" Width="140" Style="{StaticResource txtContent}" x:Name="txt_patientsname"></TextBox>
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" Margin="5,0" Grid.Row="1" Grid.Column="2">
+                    <TextBlock FontSize="14" VerticalAlignment="Center">病人性别：</TextBlock>
+                    <TextBox Height="30" Width="140" Style="{StaticResource txtContent}" x:Name="txt_Patientsex"></TextBox>
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" Margin="5,0" Grid.Row="2">
+                    <TextBlock FontSize="14" VerticalAlignment="Center">病人年龄：</TextBlock>
+                    <TextBox Height="30" Width="140" Style="{StaticResource txtContent}" x:Name="txt_patientage"></TextBox>
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" Margin="5,0" Grid.Row="2" Grid.Column="1">
+                    <TextBlock FontSize="14" VerticalAlignment="Center">开嘱医生：</TextBlock>
+                    <TextBox Height="30" Width="140" Style="{StaticResource txtContent}" x:Name="txt_doctor"></TextBox>
+                </DockPanel>
+
+                <DockPanel VerticalAlignment="Center" Margin="5,0,5,0" Grid.Row="3" Grid.ColumnSpan="3" >
+                    <TextBlock FontSize="14" VerticalAlignment="Center">医嘱备注：</TextBlock>
+                    <TextBox Height="30" Width="600" Style="{StaticResource txtContent}" x:Name="txt_note"></TextBox>
+                </DockPanel>
+
+            </Grid>           
+        </Grid>
+        <DockPanel Grid.Row="2" HorizontalAlignment="Right">
+            <Button Width="70" Margin="5" FontSize="14" Background="#FF1F83C9" Foreground="White" Click="Button_Click">打印</Button>
+            <Button Width="70" Margin="5" FontSize="14" Background="#FF1F83C9" Foreground="White" Click="Button_Click1">取消</Button>
+        </DockPanel>
+    </Grid>
+</Window>

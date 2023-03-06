@@ -1,0 +1,708 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4317AFC4-5D08-4D03-A251-A6F5BC332D9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp</RootNamespace>
+    <AssemblyName>WpfApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>G:\C语言学习资料\2021-08-17\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Tools\Utils\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Tools\Utils\WindowsFormsIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.7.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.7\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.7.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.7\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Connected Services\BLL.Assist\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BLL.ChuRuYuan\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BLL.Doctortion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BLL.Maintenance\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BLL.Management\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BLL.Thenurse\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="MP4\Source.cs" />
+    <Compile Include="SystemInformation\UCTabItemWithClose.xaml.cs">
+      <DependentUpon>UCTabItemWithClose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Controls\Paging.xaml.cs">
+      <DependentUpon>Paging.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Utils\CheckIDCardGetDiQu.cs" />
+    <Compile Include="Tools\Utils\CheckTrue.cs" />
+    <Compile Include="Tools\Utils\C_Code128.cs" />
+    <Compile Include="Tools\Utils\ExportExcel.cs" />
+    <Compile Include="Tools\Utils\ExportToExcel.cs" />
+    <Compile Include="Tools\Utils\GetChilObjects.cs" />
+    <Compile Include="View\1\cs.xaml.cs">
+      <DependentUpon>cs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\1\Detailedquery.xaml.cs">
+      <DependentUpon>Detailedquery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\1\Hospital.xaml.cs">
+      <DependentUpon>Hospital.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\1\UC_Monewpatiemts.xaml.cs">
+      <DependentUpon>UC_Monewpatiemts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\1\UC_Newpatients.xaml.cs">
+      <DependentUpon>UC_Newpatients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Checkthe.xaml.cs">
+      <DependentUpon>Checkthe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Materialinformation.xaml.cs">
+      <DependentUpon>Materialinformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Materialinput.xaml.cs">
+      <DependentUpon>Materialinput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Ofapplication.xaml.cs">
+      <DependentUpon>Ofapplication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\operationaudit.xaml.cs">
+      <DependentUpon>operationaudit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Query.xaml.cs">
+      <DependentUpon>Query.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Querycation.xaml.cs">
+      <DependentUpon>Querycation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Receiving.xaml.cs">
+      <DependentUpon>Receiving.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Reviewstatus.xaml.cs">
+      <DependentUpon>Reviewstatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Suostart.xaml.cs">
+      <DependentUpon>Suostart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Suotart.xaml.cs">
+      <DependentUpon>Suotart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Surgeryfor.xaml.cs">
+      <DependentUpon>Surgeryfor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Theenthe.xaml.cs">
+      <DependentUpon>Theenthe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\TUEuerycation.xaml.cs">
+      <DependentUpon>TUEuerycation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assist\Toquery.xaml.cs">
+      <DependentUpon>Toquery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maintenance\Accountmangent.xaml.cs">
+      <DependentUpon>Accountmangent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maintenance\Loginrecord.xaml.cs">
+      <DependentUpon>Loginrecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maintenance\Thenewaccount.xaml.cs">
+      <DependentUpon>Thenewaccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Management\Drugsmanagement.xaml.cs">
+      <DependentUpon>Drugsmanagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Management\IMedicineback.xaml.cs">
+      <DependentUpon>IMedicineback.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Management\Management.xaml.cs">
+      <DependentUpon>Management.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Management\Modifythedrug.xaml.cs">
+      <DependentUpon>Modifythedrug.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Management\Newdrugs.xaml.cs">
+      <DependentUpon>Newdrugs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Management\Refundmanagement.xaml.cs">
+      <DependentUpon>Refundmanagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Print\WD_Baginformation.xaml.cs">
+      <DependentUpon>WD_Baginformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Print\WD_Formtoprint.xaml.cs">
+      <DependentUpon>WD_Formtoprint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Print\WD_PrintStaffTable.xaml.cs">
+      <DependentUpon>WD_PrintStaffTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Print\WD_Thednformation.xaml.cs">
+      <DependentUpon>WD_Thednformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Publicpage\Stripeprint.xaml.cs">
+      <DependentUpon>Stripeprint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Thenurse\Distrbution.xaml.cs">
+      <DependentUpon>Distrbution.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Thenurse\Toapplyfor.xaml.cs">
+      <DependentUpon>Toapplyfor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Thenurse\UC_Distributionbed.xaml.cs">
+      <DependentUpon>UC_Distributionbed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Thenurse\UC_ModifyDistributionbed.xaml.cs">
+      <DependentUpon>UC_ModifyDistributionbed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Thenurse\Uc_ModifySeparate.xaml.cs">
+      <DependentUpon>Uc_ModifySeparate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Thenurse\UC_Separate.xaml.cs">
+      <DependentUpon>UC_Separate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\workstation\Advice.xaml.cs">
+      <DependentUpon>Advice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\workstation\Aorders.xaml.cs">
+      <DependentUpon>Aorders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\workstation\Modifythe.xaml.cs">
+      <DependentUpon>Modifythe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\workstation\prescribing.xaml.cs">
+      <DependentUpon>prescribing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\workstation\Surgery.xaml.cs">
+      <DependentUpon>Surgery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\workstation\Workstation.xaml.cs">
+      <DependentUpon>Workstation.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Dictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Connected Services\BLL.WDLogin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SystemInformation\UCTabItemWithClose.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tools\Controls\Paging.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tools\Dictionary\Buttonstyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\1\cs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\1\Detailedquery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\1\Hospital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\1\UC_Monewpatiemts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\1\UC_Newpatients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Checkthe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Materialinformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Materialinput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Ofapplication.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\operationaudit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Query.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Querycation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Receiving.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Reviewstatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Suostart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Suotart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Surgeryfor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Theenthe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\TUEuerycation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Assist\Toquery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Maintenance\Accountmangent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Maintenance\Loginrecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Maintenance\Thenewaccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Management\Drugsmanagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Management\IMedicineback.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Management\Management.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Management\Modifythedrug.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Management\Newdrugs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Management\Refundmanagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Print\WD_Baginformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Print\WD_Formtoprint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Print\WD_PrintStaffTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Print\WD_Thednformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Publicpage\Stripeprint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Thenurse\Distrbution.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Thenurse\Toapplyfor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Thenurse\UC_Distributionbed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Thenurse\UC_ModifyDistributionbed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Thenurse\Uc_ModifySeparate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Thenurse\UC_Separate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\workstation\Advice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\workstation\Aorders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\workstation\Modifythe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\workstation\prescribing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\workstation\Surgery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\workstation\Workstation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Connected Services\BLL.Assist\Assist1.wsdl" />
+    <None Include="Connected Services\BLL.Assist\BLL3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Assist\BLL31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Assist\BLL32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.ChuRuYuan\BLL3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.ChuRuYuan\BLL31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.ChuRuYuan\BLL32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.ChuRuYuan\ChuRuYuan1.wsdl" />
+    <None Include="Connected Services\BLL.Doctortion\BLL3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Doctortion\BLL31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Doctortion\BLL32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Doctortion\Doctortion1.wsdl" />
+    <None Include="Connected Services\BLL.Maintenance\BLL.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Maintenance\BLL1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Maintenance\BLL2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Maintenance\Maintenance.wsdl" />
+    <None Include="Connected Services\BLL.Management\BLL.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Management\BLL1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Management\BLL2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Management\Management.wsdl" />
+    <None Include="Connected Services\BLL.Thenurse\BLL3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Thenurse\BLL31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Thenurse\BLL32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.Thenurse\Thenurse1.wsdl" />
+    <None Include="Connected Services\BLL.WDLogin\BLL3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.WDLogin\BLL31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.WDLogin\BLL32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BLL.WDLogin\WDLogin1.wsdl" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BLL.Assist\" />
+    <WCFMetadataStorage Include="Connected Services\BLL.ChuRuYuan\" />
+    <WCFMetadataStorage Include="Connected Services\BLL.Doctortion\" />
+    <WCFMetadataStorage Include="Connected Services\BLL.Maintenance\" />
+    <WCFMetadataStorage Include="Connected Services\BLL.Management\" />
+    <WCFMetadataStorage Include="Connected Services\BLL.Thenurse\" />
+    <WCFMetadataStorage Include="Connected Services\BLL.WDLogin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BLL.WDLogin\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BLL.WDLogin\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BLL.WDLogin\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Login\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\img\1.jpg" />
+    <Resource Include="images\img\name.png" />
+    <Resource Include="images\img\password.png" />
+    <Resource Include="images\img\图层 10.png" />
+    <Resource Include="images\img\图层 11.png" />
+    <Resource Include="images\img\图层 12.png" />
+    <Resource Include="images\img\图层 13.png" />
+    <Resource Include="images\img\图层 14.png" />
+    <Resource Include="images\img\图层 15.png" />
+    <Resource Include="images\img\图层 16.png" />
+    <Resource Include="images\img\图层 17.png" />
+    <Resource Include="images\img\图层 18.png" />
+    <Resource Include="images\img\图层 19.png" />
+    <Resource Include="images\img\图层 20.png" />
+    <Resource Include="images\img\图层 21.png" />
+    <Resource Include="images\img\图层 22.png" />
+    <Resource Include="images\img\图层 23.png" />
+    <Resource Include="images\img\图层 24.png" />
+    <Resource Include="images\img\图层 25.png" />
+    <Resource Include="images\img\图层 26.png" />
+    <Resource Include="images\img\图层 27.png" />
+    <Resource Include="images\img\图层 28.png" />
+    <Resource Include="images\img\图层 29.png" />
+    <Resource Include="images\img\图层 4.png" />
+    <Resource Include="images\img\图层 5.png" />
+    <Resource Include="images\img\图层 6.png" />
+    <Resource Include="images\img\图层 7.png" />
+    <Resource Include="images\img\图层 8.png" />
+    <Resource Include="images\img\图层 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Login\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Login\logo-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BLL.ChuRuYuan\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BLL.ChuRuYuan\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BLL.ChuRuYuan\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BLL.Management\BLL.disco" />
+    <None Include="Connected Services\BLL.Management\configuration91.svcinfo" />
+    <None Include="Connected Services\BLL.Management\configuration.svcinfo" />
+    <None Include="Connected Services\BLL.Management\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\BLL.Maintenance\BLL.disco" />
+    <None Include="Connected Services\BLL.Maintenance\configuration91.svcinfo" />
+    <None Include="Connected Services\BLL.Maintenance\configuration.svcinfo" />
+    <None Include="Connected Services\BLL.Maintenance\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Tools\Utils\System.Windows.Forms.dll" />
+    <Content Include="Tools\Utils\WindowsFormsIntegration.dll" />
+    <Resource Include="images\Login\2.png" />
+    <None Include="Connected Services\BLL.Thenurse\configuration91.svcinfo" />
+    <None Include="Connected Services\BLL.Thenurse\configuration.svcinfo" />
+    <None Include="Connected Services\BLL.Thenurse\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\BLL.Doctortion\configuration91.svcinfo" />
+    <None Include="Connected Services\BLL.Doctortion\configuration.svcinfo" />
+    <None Include="Connected Services\BLL.Doctortion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\BLL.Assist\configuration91.svcinfo" />
+    <None Include="Connected Services\BLL.Assist\configuration.svcinfo" />
+    <None Include="Connected Services\BLL.Assist\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\BLL.Assist\BLL1.disco" />
+    <None Include="Connected Services\BLL.ChuRuYuan\BLL1.disco" />
+    <None Include="Connected Services\BLL.Doctortion\BLL1.disco" />
+    <None Include="Connected Services\BLL.Thenurse\BLL1.disco" />
+    <None Include="Connected Services\BLL.WDLogin\BLL1.disco" />
+    <Content Include="MP4\1.1.mp4" />
+    <Content Include="MP4\Hexagons IV - 4K.mp4" />
+    <Content Include="MP4\黄昏海.mp4" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

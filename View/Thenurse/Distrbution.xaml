@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="WpfApp.View.Thenurse.Distrbution"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              Name="uc_CreateLines"
+             d:DesignHeight="560" d:DesignWidth="1366"
+             Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <!--鼠标：右键菜单-->
+        <ContextMenu x:Key="cmButton" BorderBrush="SkyBlue" >
+            <MenuItem Name="mi_Insert" Header="新增"  Click="mi_Insert_Click">
+                <MenuItem.Icon>
+                    <Image></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+            <Separator  BorderBrush="SkyBlue"/>
+            <MenuItem Name="mi_Stop" Header="修改" Click="mi_Stop_Click">
+                <MenuItem.Icon>
+                    <Image></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+            <Separator  BorderBrush="SkyBlue"/>
+            <MenuItem Name="mi_Delete" Header="删除" Click="mi_Delete_Click">
+                <MenuItem.Icon>
+                    <Image></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+    </UserControl.Resources>
+    <!--布局-->
+
+    <DockPanel Margin="10">
+        <Border Background="#FF1F83C9" CornerRadius="10,10,0,0" Height="30" DockPanel.Dock="Top">
+            <TextBlock VerticalAlignment="Center" Foreground="White" Margin="10,0,0,0">入院病人分配与查询</TextBlock>
+        </Border>
+        <!--表格数据-->
+        <Grid VerticalAlignment="Stretch" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Margin="0,5,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Button Background="#FF1F83C9" Content="分配床位" Width="80" Height="24" HorizontalAlignment="Right" Margin="10,0,5,0" Foreground="White" BorderBrush="{x:Null}" Click="Points_Click"/>
+                <Button Background="#FF1F83C9" Content="查询所有病人" Width="80" Margin="13,0,100,0" Foreground="White" BorderBrush="{x:Null}" Click="Patients_Click"/>
+            </Grid>
+            <!--1、线路-->
+
+            <GroupBox Grid.Column="0"  Margin="0,29,0,0" Foreground="White" >
+
+                <!--WrapPanel：环绕面板 。
+                                  Orientation——根据内容自动换行
+                                 当Orientation属性的值设置为 Horizontal：元素是从左向右排列的，然后自上至下自动换行。
+                                 当Orientation属性的值设置为Vertical：元素是从上向下排列的，然后从左至右自动换行。-->
+                <ScrollViewer  Grid.Row="1">
+                    <WrapPanel Name="WPLines" Orientation="Horizontal" Background="White">
+                        <!--线路信息：（后台去定义）-->
+                        <!--<Border Width="125" Height="105" Background="White" BorderBrush="SkyBlue" BorderThickness="1,1,1,1" CornerRadius="5" Margin="5">
+                                    <Grid Width="120" Height="100" MouseRightButtonDown="grd_MouseRightButtonDown" MouseLeftButtonDown="grd_MouseLeftButtonDown" MouseEnter="grd_MouseEnter" MouseLeave="grd_MouseLeave"  ToolTip="" Tag="">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="3*"/>
+                                            <RowDefinition Height="2*"/>                                            
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Grid.Row="0" Name="txt_LineName" Text="广州-南沙" Foreground="SkyBlue" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <TextBlock Grid.Row="1" Name="txt_DetailCount" Text="总站数:10" Foreground="SkyBlue" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </Border>-->
+                    </WrapPanel>
+                </ScrollViewer>
+            </GroupBox>
+
+            <!--2、表格预览-->
+            <GroupBox Grid.Column="1" Header="病人查询" Margin="0,5,0,0"  Foreground="#000000">
+                <DataGrid x:Name="dgStation"
+                          IsReadOnly="True" AutoGenerateColumns="False" Background="white"
+                  CanUserResizeColumns="False" CanUserResizeRows="False"  SelectionMode="Single"
+                  CanUserReorderColumns="False" AlternationCount="2"  RowHeaderWidth="0" CanUserAddRows="False"
+                    VerticalAlignment="Stretch"  LoadingRow="dgStation_LoadingRow" >
+                    <DataGrid.Columns >
+                        <DataGridTextColumn Header="序号"  Binding="{Binding number }" Width="2*"/>
+                        <DataGridTextColumn Header="病人ID"   Visibility="Collapsed" Binding="{Binding patientID }"/>
+                        <DataGridTextColumn Header="科室ID"   Visibility="Collapsed" Binding="{Binding detailedLineID }"/>
+                        <DataGridTextColumn Header="住院号"   Binding="{Binding Hospital}" Width="3*" />
+                        <DataGridTextColumn Header="入院日期"   Binding="{Binding Admissiontime, StringFormat=\{0:yyyy-MM-dd\}}" Width="5*" />
+                        <DataGridTextColumn Header="姓名"   Binding="{Binding Patientname}" Width="3*" />
+                        <DataGridTextColumn Header="年龄"   Binding="{Binding staffAge}" Width="3*" />
+                        <DataGridTextColumn Header="诊断医生"   Binding="{Binding Attending}" Width="3*" />
+                        <DataGridTextColumn Header="科室"   Binding="{Binding detailedAttributeName}" Width="2*" />
+                        <DataGridTextColumn Header="床位号"   Binding="{Binding BedsNo}" Width="3*" />
+                        <DataGridTextColumn Header="备注"   Binding="{Binding Nane}" Width="7*" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </GroupBox>
+        </Grid>
+    </DockPanel>
+    <!--布局  END-->
+</UserControl>
+

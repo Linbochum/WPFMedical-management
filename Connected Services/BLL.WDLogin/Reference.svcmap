@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7f63ba98-657f-45ca-aa40-0ae2a2073183" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:15008/BLL.WDLogin.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BLL3.xsd" MetadataType="Schema" ID="64e88cd9-77d2-409f-a1d6-9e8f870ad4af" SourceId="1" SourceUrl="http://localhost:15008/BLL.WDLogin.svc?xsd=xsd1" />
+    <MetadataFile FileName="BLL31.xsd" MetadataType="Schema" ID="e841e764-89dc-485a-91ca-d6161267b66d" SourceId="1" SourceUrl="http://localhost:15008/BLL.WDLogin.svc?xsd=xsd2" />
+    <MetadataFile FileName="WDLogin1.wsdl" MetadataType="Wsdl" ID="ad3f6214-f076-443e-ab5f-c92cd43feed3" SourceId="1" SourceUrl="http://localhost:15008/BLL.WDLogin.svc?wsdl" />
+    <MetadataFile FileName="BLL1.disco" MetadataType="Disco" ID="a4c950c4-398f-4085-b816-740c1776087c" SourceId="1" SourceUrl="http://localhost:15008/BLL.WDLogin.svc?disco" />
+    <MetadataFile FileName="BLL32.xsd" MetadataType="Schema" ID="b52f600f-c5c3-47e6-843f-bfc74fec2bb9" SourceId="1" SourceUrl="http://localhost:15008/BLL.WDLogin.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

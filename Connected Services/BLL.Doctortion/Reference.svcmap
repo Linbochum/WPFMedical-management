@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="884eb473-f290-4e8a-acc6-59f0d2dab054" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:15008/BLL.Tools.Doctortion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BLL3.xsd" MetadataType="Schema" ID="69d2435d-1ab6-4292-9984-aac0ebed0bda" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Doctortion.svc?xsd=xsd2" />
+    <MetadataFile FileName="BLL1.disco" MetadataType="Disco" ID="8ad76474-4f79-49d0-bcd3-845602d8a6df" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Doctortion.svc?disco" />
+    <MetadataFile FileName="BLL31.xsd" MetadataType="Schema" ID="4d9897d3-fff2-4aac-b8d3-ee66a9d4b058" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Doctortion.svc?xsd=xsd0" />
+    <MetadataFile FileName="BLL32.xsd" MetadataType="Schema" ID="48ded6a2-3f3b-4051-8622-288dc1b68fd8" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Doctortion.svc?xsd=xsd1" />
+    <MetadataFile FileName="Doctortion1.wsdl" MetadataType="Wsdl" ID="736c4ceb-1b24-42b1-965c-8032b3cb1034" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Doctortion.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

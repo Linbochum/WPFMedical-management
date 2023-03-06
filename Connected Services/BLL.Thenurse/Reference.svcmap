@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="79383084-8692-4b0a-a579-30166e668cf2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:15008/BLL.Tools.Thenurse.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BLL3.xsd" MetadataType="Schema" ID="14120c5f-2605-409d-aca5-3fbbc225d55a" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Thenurse.svc?xsd=xsd2" />
+    <MetadataFile FileName="BLL1.disco" MetadataType="Disco" ID="66c0c998-d712-4f07-8a33-fdca65fbd8e8" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Thenurse.svc?disco" />
+    <MetadataFile FileName="Thenurse1.wsdl" MetadataType="Wsdl" ID="77c970e3-af05-446d-93c1-4d7118218a4e" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Thenurse.svc?wsdl" />
+    <MetadataFile FileName="BLL31.xsd" MetadataType="Schema" ID="63d8acb0-6d60-4845-9200-3800dc2b936d" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Thenurse.svc?xsd=xsd0" />
+    <MetadataFile FileName="BLL32.xsd" MetadataType="Schema" ID="17ed7ba2-0cff-4c97-933a-c64bfcd3c079" SourceId="1" SourceUrl="http://localhost:15008/BLL.Tools.Thenurse.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

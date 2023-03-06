@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ChuRuYuan" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.ChuRuYuan.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.ChuRuYuan.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.ChuRuYuan.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ChuRuYuan_btnQuerydata_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerydata" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_btnQuerydata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerydataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_logintime_InputMessage">
+    <wsdl:part name="parameters" element="tns:logintime" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_logintime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logintimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_SelectGender_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectGender" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_SelectGender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectGenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_department_InputMessage">
+    <wsdl:part name="parameters" element="tns:department" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_department_OutputMessage">
+    <wsdl:part name="parameters" element="tns:departmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_InsertStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStaff" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_InsertStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_Modifythedata_InputMessage">
+    <wsdl:part name="parameters" element="tns:Modifythedata" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_Modifythedata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifythedataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_btnBlood_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnBlood" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_btnBlood_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnBloodResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_btnAllergic_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnAllergic" />
+  </wsdl:message>
+  <wsdl:message name="ChuRuYuan_btnAllergic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnAllergicResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ChuRuYuan">
+    <wsdl:operation name="btnQuerydata">
+      <wsdl:input wsaw:Action="http://tempuri.org/ChuRuYuan/btnQuerydata" message="tns:ChuRuYuan_btnQuerydata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ChuRuYuan/btnQuerydataResponse" message="tns:ChuRuYuan_btnQuerydata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logintime">
+      <wsdl:input wsaw:Action="http://tempuri.org/ChuRuYuan/logintime" message="tns:ChuRuYuan_logintime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ChuRuYuan/logintimeResponse" message="tns:ChuRuYuan_logintime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectGender">
+      <wsdl:input wsaw:Action="http://tempuri.org/ChuRuYuan/SelectGender" message="tns:ChuRuYuan_SelectGender_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ChuRuYuan/SelectGenderResponse" message="tns:ChuRuYuan_SelectGender_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="department">
+      <wsdl:input wsaw:Action="http://tempuri.org/ChuRuYuan/department" message="tns:ChuRuYuan_department_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ChuRuYuan/departmentResponse" message="tns:ChuRuYuan_department_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/ChuRuYuan/InsertStaff" message="tns:ChuRuYuan_InsertStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ChuRuYuan/InsertStaffResponse" message="tns:ChuRuYuan_InsertStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ChuRuYuan/Delete" message="tns:ChuRuYuan_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ChuRuYuan/DeleteResponse" message="tns:ChuRuYuan_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Modifythedata">
+      <wsdl:input wsaw:Action="http://tempuri.org/ChuRuYuan/Modifythedata" message="tns:ChuRuYuan_Modifythedata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ChuRuYuan/ModifythedataResponse" message="tns:ChuRuYuan_Modifythedata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnBlood">
+      <wsdl:input wsaw:Action="http://tempuri.org/ChuRuYuan/btnBlood" message="tns:ChuRuYuan_btnBlood_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ChuRuYuan/btnBloodResponse" message="tns:ChuRuYuan_btnBlood_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnAllergic">
+      <wsdl:input wsaw:Action="http://tempuri.org/ChuRuYuan/btnAllergic" message="tns:ChuRuYuan_btnAllergic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ChuRuYuan/btnAllergicResponse" message="tns:ChuRuYuan_btnAllergic_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BLL.Tools.ChuRuYuan" type="tns:ChuRuYuan">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="btnQuerydata">
+      <soap:operation soapAction="http://tempuri.org/ChuRuYuan/btnQuerydata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logintime">
+      <soap:operation soapAction="http://tempuri.org/ChuRuYuan/logintime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectGender">
+      <soap:operation soapAction="http://tempuri.org/ChuRuYuan/SelectGender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="department">
+      <soap:operation soapAction="http://tempuri.org/ChuRuYuan/department" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStaff">
+      <soap:operation soapAction="http://tempuri.org/ChuRuYuan/InsertStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/ChuRuYuan/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modifythedata">
+      <soap:operation soapAction="http://tempuri.org/ChuRuYuan/Modifythedata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnBlood">
+      <soap:operation soapAction="http://tempuri.org/ChuRuYuan/btnBlood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnAllergic">
+      <soap:operation soapAction="http://tempuri.org/ChuRuYuan/btnAllergic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ChuRuYuan">
+    <wsdl:port name="BLL.Tools.ChuRuYuan" binding="tns:BLL.Tools.ChuRuYuan">
+      <soap:address location="http://localhost:15008/BLL.Tools.ChuRuYuan.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

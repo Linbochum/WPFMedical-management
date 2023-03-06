@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Assist" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Assist.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Assist.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Assist.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Assist_btnapplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnapplication" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnapplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnapplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnmodifyingfor_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnmodifyingfor" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnmodifyingfor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnmodifyingforResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnaudit_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnaudit" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnaudit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnauditResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnReview" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnDeleteation_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeleteation" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnDeleteation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnDeleteationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnapproved_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnapproved" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnapproved_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnapprovedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnAnesthesia_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnAnesthesia" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnAnesthesia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnAnesthesiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnsurgeon_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnsurgeon" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnsurgeon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnsurgeonResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btninformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:btninformation" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btninformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btninformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnongoing_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnongoing" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnongoing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnongoingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnended_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnended" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnended_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnendedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnQuerycation_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerycation" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnQuerycation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerycationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnRec_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnRec" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnRec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnclassification_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnclassification" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnclassification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnclassificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnMaterialinput_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnMaterialinput" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnMaterialinput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnMaterialinputResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnSuppliesquery_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnSuppliesquery" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnSuppliesquery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnSuppliesqueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnSuppliesdelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnSuppliesdelete" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnSuppliesdelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnSuppliesdeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnModifygoods_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnModifygoods" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnModifygoods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnModifygoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnApp" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnauditing_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnauditing" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnauditing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnauditingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnSdelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnSdelete" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnSdelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnSdeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnRecipients_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnRecipients" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnRecipients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnmedicine_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnmedicine" />
+  </wsdl:message>
+  <wsdl:message name="Assist_btnmedicine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnmedicineResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Assist">
+    <wsdl:operation name="btnapplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnapplication" message="tns:Assist_btnapplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnapplicationResponse" message="tns:Assist_btnapplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnmodifyingfor">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnmodifyingfor" message="tns:Assist_btnmodifyingfor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnmodifyingforResponse" message="tns:Assist_btnmodifyingfor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnaudit">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnaudit" message="tns:Assist_btnaudit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnauditResponse" message="tns:Assist_btnaudit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnReview" message="tns:Assist_btnReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnReviewResponse" message="tns:Assist_btnReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnDeleteation">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnDeleteation" message="tns:Assist_btnDeleteation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnDeleteationResponse" message="tns:Assist_btnDeleteation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnapproved">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnapproved" message="tns:Assist_btnapproved_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnapprovedResponse" message="tns:Assist_btnapproved_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnAnesthesia">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnAnesthesia" message="tns:Assist_btnAnesthesia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnAnesthesiaResponse" message="tns:Assist_btnAnesthesia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnsurgeon">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnsurgeon" message="tns:Assist_btnsurgeon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnsurgeonResponse" message="tns:Assist_btnsurgeon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btninformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btninformation" message="tns:Assist_btninformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btninformationResponse" message="tns:Assist_btninformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnongoing">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnongoing" message="tns:Assist_btnongoing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnongoingResponse" message="tns:Assist_btnongoing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnended">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnended" message="tns:Assist_btnended_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnendedResponse" message="tns:Assist_btnended_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnQuerycation">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnQuerycation" message="tns:Assist_btnQuerycation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnQuerycationResponse" message="tns:Assist_btnQuerycation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnRec">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnRec" message="tns:Assist_btnRec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnRecResponse" message="tns:Assist_btnRec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnclassification">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnclassification" message="tns:Assist_btnclassification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnclassificationResponse" message="tns:Assist_btnclassification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnMaterialinput">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnMaterialinput" message="tns:Assist_btnMaterialinput_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnMaterialinputResponse" message="tns:Assist_btnMaterialinput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnSuppliesquery">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnSuppliesquery" message="tns:Assist_btnSuppliesquery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnSuppliesqueryResponse" message="tns:Assist_btnSuppliesquery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnSuppliesdelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnSuppliesdelete" message="tns:Assist_btnSuppliesdelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnSuppliesdeleteResponse" message="tns:Assist_btnSuppliesdelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnModifygoods">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnModifygoods" message="tns:Assist_btnModifygoods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnModifygoodsResponse" message="tns:Assist_btnModifygoods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnApp" message="tns:Assist_btnApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnAppResponse" message="tns:Assist_btnApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnauditing">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnauditing" message="tns:Assist_btnauditing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnauditingResponse" message="tns:Assist_btnauditing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnSdelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnSdelete" message="tns:Assist_btnSdelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnSdeleteResponse" message="tns:Assist_btnSdelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnRecipients">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnRecipients" message="tns:Assist_btnRecipients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnRecipientsResponse" message="tns:Assist_btnRecipients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnmedicine">
+      <wsdl:input wsaw:Action="http://tempuri.org/Assist/btnmedicine" message="tns:Assist_btnmedicine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Assist/btnmedicineResponse" message="tns:Assist_btnmedicine_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BLL.Tools.Assist" type="tns:Assist">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="btnapplication">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnapplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnmodifyingfor">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnmodifyingfor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnaudit">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnaudit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnReview">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnDeleteation">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnDeleteation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnapproved">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnapproved" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnAnesthesia">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnAnesthesia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnsurgeon">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnsurgeon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btninformation">
+      <soap:operation soapAction="http://tempuri.org/Assist/btninformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnongoing">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnongoing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnended">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnended" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnQuerycation">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnQuerycation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnRec">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnRec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnclassification">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnclassification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnMaterialinput">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnMaterialinput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnSuppliesquery">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnSuppliesquery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnSuppliesdelete">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnSuppliesdelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnModifygoods">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnModifygoods" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnApp">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnauditing">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnauditing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnSdelete">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnSdelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnRecipients">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnRecipients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnmedicine">
+      <soap:operation soapAction="http://tempuri.org/Assist/btnmedicine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Assist">
+    <wsdl:port name="BLL.Tools.Assist" binding="tns:BLL.Tools.Assist">
+      <soap:address location="http://localhost:15008/BLL.Tools.Assist.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,67 @@
+﻿<Window x:Class="WpfApp.View.Assist.Toquery"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp.View.Assist"
+        mc:Ignorable="d"
+        Title="审核" Height="500" Width="450" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>                
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <DockPanel Margin="10,0">
+                <TextBlock FontSize="14" VerticalAlignment="Center" Margin="7,0">申请号:</TextBlock>
+                <TextBox Width="130" Height="30" VerticalContentAlignment="Center" x:Name="txt_Application"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="10,0" Grid.Column="1">
+                <TextBlock FontSize="14" VerticalAlignment="Center" Margin="7,0">申请人:</TextBlock>
+                <TextBox Width="130" Height="30" VerticalContentAlignment="Center" x:Name="txt_Theapplicant"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="10,0" Grid.Row="1">
+                <TextBlock FontSize="14" VerticalAlignment="Center" >申请物资:</TextBlock>
+                <TextBox Width="130" Height="30" VerticalContentAlignment="Center" x:Name="txt_supplies"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="10,0" Grid.Column="1" Grid.Row="1">
+                <TextBlock FontSize="14" VerticalAlignment="Center">申请数量:</TextBlock>
+                <TextBox Width="130" Height="30" VerticalContentAlignment="Center" x:Name="txt_applications"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="10,0" Grid.Row="2">
+                <TextBlock FontSize="14" VerticalAlignment="Center">申请科室:</TextBlock>
+                <TextBox Width="130" Height="30" VerticalContentAlignment="Center" x:Name='txt_department'></TextBox>
+            </DockPanel>
+            
+            <DockPanel Margin="10,0" Grid.Row="2" Grid.Column="1">
+                <TextBlock FontSize="14" VerticalAlignment="Center">申请结果:</TextBlock>
+                <ComboBox Width="130" Height="30" VerticalContentAlignment="Center" x:Name='cbo_Application'></ComboBox>
+            </DockPanel>
+            <!--<DockPanel Margin="10,0,10,0" Grid.Row="3" Grid.ColumnSpan="2">
+                <TextBlock FontSize="14" VerticalAlignment="Center">申请备注:</TextBlock>
+                <TextBox Width="350" Height="30" VerticalContentAlignment="Center" x:Name="txt_Note"></TextBox>
+            </DockPanel>-->
+            <GroupBox Header="申请备注" Grid.Row="4" Grid.ColumnSpan="2" Margin="5,0">
+                <TextBox x:Name="txt_Note" AcceptsReturn="True" TextWrapping="Wrap" Height="170"></TextBox>
+            </GroupBox>
+        </Grid>
+        <DockPanel Grid.Row="7" HorizontalAlignment="Center">
+            <Button Width="60" Height="40" Click="Button_Click"  Style="{StaticResource button_save}">提交</Button>
+            <Button Width="60" Height="40" Click="Button_Clicb"  Style="{StaticResource button_save}">取消</Button>
+        </DockPanel>
+    </Grid>
+</Window>

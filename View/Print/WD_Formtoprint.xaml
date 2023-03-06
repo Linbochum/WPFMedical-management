@@ -1,0 +1,123 @@
+﻿<Window x:Class="WpfApp.View.Print.WD_Formtoprint"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"   
+        Icon="/images/Login/2.png"
+        Width="1698"
+        Title="打印员工表格" Loaded="Window_Loaded">
+    <Window.Resources>
+        <!--鼠标：右键菜单-->
+        <!--Placement:菜单位置-->
+        <ContextMenu x:Key="ContextMenu" BorderBrush="SkyBlue" Placement="MousePoint">
+            <MenuItem Name="mi_Print" Header="打印"  Click="mi_Print_Click">
+                
+            </MenuItem>
+        </ContextMenu>
+        <!--径向渐变资源-->
+        <LinearGradientBrush x:Key="LGB_Stroke" StartPoint="0,0" EndPoint="0,1">
+            <!--使用LinearGradientBrush渐变画刷：定义一个渐变画刷，然后需要定义渐变颜色，颜色已对角线形式渐变-->
+            <!--GradientStop:定义渐变颜色与颜色渐变始点-->
+            <GradientStop Color="#f2f2f2" Offset="0"/>
+            <GradientStop Color="SkyBlue" Offset="0.5"/>
+            <GradientStop Color="SkyBlue" Offset="1"/>
+        </LinearGradientBrush>
+        <!--Label样式-->
+        <Style x:Key="lblText" TargetType="Label">
+            <Setter Property="FontSize" Value=" 15"/>
+            <Setter Property="FontFamily" Value=" 15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="{DynamicResource  LGB_Stroke}"/>
+        </Style>
+        <!--DataGrid的样式-->
+        <Style x:Key="DataGridStyle" TargetType="DataGrid">
+            <Setter Property="ColumnHeaderStyle" Value="{DynamicResource ColumnHeaderStyle}"></Setter>
+            <Setter Property="CellStyle" Value="{DynamicResource CellStyle}"></Setter>
+            <Setter Property="RowStyle" Value="{DynamicResource RowStyle}"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="EnableRowVirtualization" Value="False"></Setter>
+            <!--GridLinesVisibility：网格线可见性样式，其值有四种：All,Horizontal,None,Vertical。对应：全部，水平，没有，垂直-->
+            <Setter Property="GridLinesVisibility" Value="Horizontal"></Setter>
+            <!--禁止在尾行手动添加数据-->
+            <Setter Property="CanUserAddRows" Value="False"></Setter>
+            <Setter Property="AutoGenerateColumns" Value="False"></Setter>
+            <Setter Property="IsEnabled" Value="True"></Setter>
+        </Style>
+        <Style x:Key="ColumnHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="FontWeight"  Value="Black"/>
+            <Setter Property="Height" Value="28"></Setter>
+            <Setter Property="Background" Value="#f2f2f2"></Setter>
+            <!--F2F2F2-->
+            <Setter Property="BorderThickness" Value="1"></Setter>
+            <Setter Property="BorderBrush" Value="LightBlue"></Setter>
+            <!--CBCBCB-->
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <!--水平居中-->
+            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+            <!--垂直居中-->
+        </Style>
+        <Style x:Key="RowStyle" TargetType="DataGridRow">
+            <Setter Property="Height" Value="26"/>
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" Value="#F2F2F2"/>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background"  Value="LightBlue" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="CellStyle" TargetType="DataGridCell">
+            <Setter Property="Height" Value="26.1"></Setter>
+            <Setter Property="FontSize" Value="13"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridCell">
+                        <Border x:Name="Bg" Background="Transparent" BorderThickness="1" UseLayoutRounding="True" BorderBrush="LightBlue">
+                            <!--FFCBCBCB-->
+                            <ContentPresenter HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background"  Value="#CBCBCB" />
+                    <Setter Property="Foreground" Value="#000000" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <DockPanel Name="printDockPanel" ContextMenu="{StaticResource ContextMenu}">
+        <StackPanel DockPanel.Dock="Top" Margin="10" >
+            <Label Content="在院病人信息表" FontSize="22" Style="{StaticResource lblText}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF178DDE"/>
+            <Label Name="lbl_Tiem" Content="打印时间：" Style="{StaticResource lblText}" HorizontalAlignment="Right" Foreground="#FF178DDE"/>
+        </StackPanel>
+        <DataGrid  x:Name="dgvStaff" Style="{StaticResource DataGridStyle}" LoadingRow="dgvStaff_LoadingRow">
+            <DataGrid.Columns>
+                <DataGridTextColumn  Width="40" Header="序号" Binding="{Binding number}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="病人ID"  Visibility="Collapsed" Binding="{Binding patientID}"  Width="10" />
+                <DataGridTextColumn Header="住院号" Binding="{Binding Hospital}" Width="80"/>
+                <DataGridTextColumn Header="姓名" Binding="{Binding Patientname}" Width="70"/>
+                <DataGridTextColumn Header="科室ID" Visibility="Collapsed" Binding="{Binding as_departmentK}" Width="80"/>
+                <DataGridTextColumn Header="科室"  Binding="{Binding detailedAttributeName}" Width="80"/>
+                <DataGridTextColumn Header="联系电话"  Binding="{Binding phoneNumber}" Width="120"/>
+                <DataGridTextColumn Header="病人年龄"  Binding="{Binding staffAge}" Width="90"/>
+                <DataGridTextColumn Header="性别ID" Visibility="Collapsed" Binding="{Binding as_GenderID}" Width="10" />
+                <DataGridTextColumn Header="性别"  Binding="{Binding gender}" Width="50"  />
+                <DataGridTextColumn Header="身份证号"  Binding="{Binding idCard}" Width="180" />
+                <DataGridTextColumn Header="出生日期"  Binding="{Binding dateOfBirth, StringFormat=\{0:yyyy-MM-dd\}}" Width="80" />
+                <DataGridTextColumn Header="年龄"  Binding="{Binding staffAge}" Width="60" />
+                <DataGridTextColumn Header="户口地址"  Binding="{Binding staffAddress}" Width="200"  />
+                <DataGridTextColumn Header="诊断医生"  Binding="{Binding Attending}" Width="100"  />
+                <DataGridTextColumn Header="入院日期"  Binding="{Binding Admissiontime, StringFormat=\{0:yyyy-MM-dd\}}" Width="150" />
+                <DataGridTextColumn Header="民族信息"  Binding="{Binding Nationa, StringFormat=\{0:yyyy-MM-dd\}}" Width="150" />
+                <DataGridTextColumn Header="备注"  Binding="{Binding Nane}" Width="238" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>

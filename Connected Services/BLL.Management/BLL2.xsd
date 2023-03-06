@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="bynQuerydrugs">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bynQuerydrugsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bynQuerydrugsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnCTraditional">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnCTraditionalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btnCTraditionalResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnDrugtype">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnDrugtypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btnDrugtypeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btn_Cedicine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cbo_Sup" type="xs:int" />
+        <xs:element minOccurs="0" name="txtDrugnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtTheprice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtEnternumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtDrugname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtGeneratethedate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtQualitytime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtProductionaddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtspecifications" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btn_CedicineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btn_CedicineResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btn_western">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cbo_Sup" type="xs:int" />
+        <xs:element minOccurs="0" name="txtDrugnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtTheprice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtEnternumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtDrugname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtGeneratethedate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtQualitytime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtProductionaddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtspecifications" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btn_westernResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btn_westernResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnDeleteComd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDC" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnDeleteComdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btnDeleteComdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnDeletCedcine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnDeletCedcineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btnDeletCedcineResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btntraditionalChid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="txtDrugnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtTheprice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtEnternumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtDrugname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtGeneratethedate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtQualitytime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtProductionaddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtspecifications" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btntraditionalChidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btntraditionalChidResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnWestern">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="txtDrugnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtTheprice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtEnternumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtDrugname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtGeneratethedate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtQualitytime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtProductionaddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtspecifications" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnWesternResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btnWesternResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnSinglereceive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnSinglereceiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btnSinglereceiveResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnAllreceive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnAllreceiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btnAllreceiveResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnnumberof">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnnumberofResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btnnumberofResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btncalculation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="JG" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btncalculationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btncalculationResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnprocessing">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UID" type="xs:int" />
+        <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="btnprocessingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="btnprocessingResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

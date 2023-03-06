@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Thenurse" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Thenurse.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Thenurse.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:15008/BLL.Tools.Thenurse.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Thenurse_btnQuerydata_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerydata" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnQuerydata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerydataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_SelectDetailLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDetailLine" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_SelectDetailLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDetailLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnrdata_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnrdata" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnrdata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnrdataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_Distributionbed_InputMessage">
+    <wsdl:part name="parameters" element="tns:Distributionbed" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_Distributionbed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DistributionbedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnempty_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnempty" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnempty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnemptyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnuerydepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnuerydepartment" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnuerydepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnuerydepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnsavebeds_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnsavebeds" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnsavebeds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnsavebedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnbeds_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnbeds" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnbeds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnbedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnQueryall_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnQueryall" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnQueryall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnQueryallResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnemptydisease_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnemptydisease" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnemptydisease_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnemptydiseaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnSpecifyapplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnSpecifyapplication" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnSpecifyapplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnSpecifyapplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnQuerylevels_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerylevels" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnQuerylevels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerylevelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnurgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnurgent" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnurgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnurgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnQuerycation_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerycation" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnQuerycation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnQuerycationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:btnInformation" />
+  </wsdl:message>
+  <wsdl:message name="Thenurse_btnInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btnInformationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Thenurse">
+    <wsdl:operation name="btnQuerydata">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnQuerydata" message="tns:Thenurse_btnQuerydata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnQuerydataResponse" message="tns:Thenurse_btnQuerydata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDetailLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/SelectDetailLine" message="tns:Thenurse_SelectDetailLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/SelectDetailLineResponse" message="tns:Thenurse_SelectDetailLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnrdata">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnrdata" message="tns:Thenurse_btnrdata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnrdataResponse" message="tns:Thenurse_btnrdata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Distributionbed">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/Distributionbed" message="tns:Thenurse_Distributionbed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/DistributionbedResponse" message="tns:Thenurse_Distributionbed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnempty">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnempty" message="tns:Thenurse_btnempty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnemptyResponse" message="tns:Thenurse_btnempty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnuerydepartment">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnuerydepartment" message="tns:Thenurse_btnuerydepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnuerydepartmentResponse" message="tns:Thenurse_btnuerydepartment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnsavebeds">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnsavebeds" message="tns:Thenurse_btnsavebeds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnsavebedsResponse" message="tns:Thenurse_btnsavebeds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnbeds">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnbeds" message="tns:Thenurse_btnbeds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnbedsResponse" message="tns:Thenurse_btnbeds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnQueryall">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnQueryall" message="tns:Thenurse_btnQueryall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnQueryallResponse" message="tns:Thenurse_btnQueryall_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnemptydisease">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnemptydisease" message="tns:Thenurse_btnemptydisease_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnemptydiseaseResponse" message="tns:Thenurse_btnemptydisease_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnSpecifyapplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnSpecifyapplication" message="tns:Thenurse_btnSpecifyapplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnSpecifyapplicationResponse" message="tns:Thenurse_btnSpecifyapplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnQuerylevels">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnQuerylevels" message="tns:Thenurse_btnQuerylevels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnQuerylevelsResponse" message="tns:Thenurse_btnQuerylevels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnurgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnurgent" message="tns:Thenurse_btnurgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnurgentResponse" message="tns:Thenurse_btnurgent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnQuerycation">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnQuerycation" message="tns:Thenurse_btnQuerycation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnQuerycationResponse" message="tns:Thenurse_btnQuerycation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btnInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/Thenurse/btnInformation" message="tns:Thenurse_btnInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Thenurse/btnInformationResponse" message="tns:Thenurse_btnInformation_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BLL.Tools.Thenurse" type="tns:Thenurse">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="btnQuerydata">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnQuerydata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDetailLine">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/SelectDetailLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnrdata">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnrdata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Distributionbed">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/Distributionbed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnempty">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnempty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnuerydepartment">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnuerydepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnsavebeds">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnsavebeds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnbeds">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnbeds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnQueryall">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnQueryall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnemptydisease">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnemptydisease" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnSpecifyapplication">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnSpecifyapplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnQuerylevels">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnQuerylevels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnurgent">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnurgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnQuerycation">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnQuerycation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btnInformation">
+      <soap:operation soapAction="http://tempuri.org/Thenurse/btnInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Thenurse">
+    <wsdl:port name="BLL.Tools.Thenurse" binding="tns:BLL.Tools.Thenurse">
+      <soap:address location="http://localhost:15008/BLL.Tools.Thenurse.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
